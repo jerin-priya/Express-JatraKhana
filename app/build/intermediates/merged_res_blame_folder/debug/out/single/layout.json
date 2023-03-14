@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/fragment_home_.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/fragment_home_.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_welcome.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_main.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_food_upload.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_food_upload.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_signup.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_login.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_train_address.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_train_address.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/fragment_address_.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/fragment_address_.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/activity_bottom_navigation.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/activity_bottom_navigation.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/fragment_cart_.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/fragment_cart_.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/food_details_card.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/food_details_card.xml"
+    },
+    {
+        "merged": "com.example.myapplication.app-mergeDebugResources-47:/layout/fragment_profile_.xml",
+        "source": "com.example.myapplication.app-main-50:/layout/fragment_profile_.xml"
+    }
+]
