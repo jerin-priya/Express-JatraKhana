@@ -79,7 +79,11 @@ public class Login extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Toast.makeText(Login.this, "Login Successful",
                                             Toast.LENGTH_SHORT).show();
+<<<<<<< Updated upstream
                                     Intent intent = new Intent(getApplicationContext(), TrainAddress.class);
+=======
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+>>>>>>> Stashed changes
                                     startActivity(intent);
                                     finish();
 

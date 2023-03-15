@@ -77,7 +77,10 @@ public class TrainAddress extends AppCompatActivity {
 
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                 //Uploading to realtime firebase
                 if(imageUri!=null){
 
@@ -99,9 +102,12 @@ public class TrainAddress extends AppCompatActivity {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(TrainAddress.this, "Successfully Uploaded in database", Toast.LENGTH_SHORT).show();
 //                                                finish();
+<<<<<<< Updated upstream
                                                 Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
                                                 startActivity(intent);
                                                 finish();
+=======
+>>>>>>> Stashed changes
                                             }
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
