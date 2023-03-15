@@ -1,14 +1,9 @@
 package com.example.myapplication;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -30,12 +25,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.Locale;
+public class FoodUpload extends AppCompatActivity {
 
-public class TrainAddress extends AppCompatActivity {
 
-    TextInputEditText trainName, dateOfJourney, chooseClass, chooseBogi, chooseSeat;
-    Button btnEnter;
+
+    TextInputEditText foodName, foodPrice, foodType;
+    Button foodEnter;
     ImageView uploadImage;
     Uri imageUri;
     StorageReference reference = FirebaseStorage.getInstance().getReference();
@@ -43,14 +38,12 @@ public class TrainAddress extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_train_address);
+        setContentView(R.layout.activity_food_upload);
 
-        trainName = findViewById(R.id.trainName);
-        dateOfJourney = findViewById(R.id.dateOfJourney);
-        chooseClass = findViewById(R.id.chooseClass);
-        chooseBogi = findViewById(R.id.chooseBogi);
-        chooseSeat = findViewById(R.id.seatNo);
-        btnEnter = findViewById(R.id.btnEnter);
+        foodName = findViewById(R.id.foodName);
+        foodPrice = findViewById(R.id.foodPrice);
+        foodType = findViewById(R.id.foodType);
+        foodEnter = findViewById(R.id.foodEnter);
         uploadImage = findViewById(R.id.uploadImage);
 
 
@@ -66,21 +59,16 @@ public class TrainAddress extends AppCompatActivity {
         });
 
 
-        btnEnter.setOnClickListener(new View.OnClickListener() {
+        foodEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = trainName.getText().toString();
-                String date = dateOfJourney.getText().toString();
-                String choseClass = chooseClass.getText().toString();
-                String bogi = chooseBogi.getText().toString();
-                String seat = chooseSeat.getText().toString();
+                String name = foodName.getText().toString();
+                String date = foodPrice.getText().toString();
+                int price = Integer.parseInt(date);
+                String type = foodType.getText().toString();
 
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
                 //Uploading to realtime firebase
                 if(imageUri!=null){
 
@@ -91,29 +79,23 @@ public class TrainAddress extends AppCompatActivity {
                             fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
-                                    TrainInfo info = new TrainInfo(name,date,choseClass,bogi,seat, imageUri.toString());
+                                    FoodInfo info = new FoodInfo(name, price, type, imageUri.toString());
 
 
-                                    DatabaseReference infoRef = FirebaseDatabase.getInstance().getReference("Train Info");
+                                    DatabaseReference infoRef = FirebaseDatabase.getInstance().getReference("Food Info");
                                     String parentKey = name;
                                     infoRef.child(parentKey).setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
-                                                Toast.makeText(TrainAddress.this, "Successfully Uploaded in database", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(FoodUpload.this, "Successfully Uploaded in database", Toast.LENGTH_SHORT).show();
 //                                                finish();
-<<<<<<< Updated upstream
-                                                Intent intent = new Intent(getApplicationContext(), BottomNavigation.class);
-                                                startActivity(intent);
-                                                finish();
-=======
->>>>>>> Stashed changes
                                             }
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(TrainAddress.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(FoodUpload.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                                         }
                                     });
                                 }
@@ -122,11 +104,11 @@ public class TrainAddress extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(TrainAddress.this, "Uploading Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(FoodUpload.this, "Uploading Failed", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }else{
-                    Toast.makeText(TrainAddress.this, "Please upload an image", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FoodUpload.this, "Please upload an image", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -153,3 +135,9 @@ public class TrainAddress extends AppCompatActivity {
         }
     }
 }
+
+
+
+
+
+
