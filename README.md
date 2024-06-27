@@ -1,5 +1,8 @@
 # Express Jatrakhana
 
+## Watch the Video
+[Watch the video]([path/to/your/video.mp4](https://github.com/jerin-priya/Express-JatraKhana/blob/main/Recorded_Video.mp4))
+
 Developed an online-based Android app for Express Jatrakhana. The stack used for this project includes Native Java and Firebase for user registration and authentication, and features a user-friendly UI/UX design.
 
 ## Table of Contents
